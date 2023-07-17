@@ -1,6 +1,9 @@
 /* work sans font from google */
   @import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&family=Open+Sans:wght@400;700;800&family=Work+Sans:wght@400;600;700;800&display=swap');
  /* shared styles */
+ .text-light-grey{
+    color: #727272;
+ }
  .btn-primary{
     border-radius: 8px;
     color: #FFFFFF;
@@ -63,7 +66,7 @@ font-weight: 700;
 /* main styles */
  main{
     max-width: 1440px;
-    margin: 0 auto;
+    margin: 70px auto;
  }
  /* teams styles */
  .teams-container{
@@ -92,17 +95,25 @@ font-weight: 700;
 }
 
 
+
 /* responsive media queries */
 @media screen and (max-width: 576px){
     header{
         padding: 20px;
     }
-    nav{
+    nav, .teams-container{
         flex-direction: column;
+    }
+    .teams-image-container{
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .teams-content{
+        padding-left: 20px;
+        padding-right: 20px;
     }
 }
 @media screen and (min-width: 576px) and (max-width: 960px) {
-    nav{
+    nav,.teams-container{
         flex-direction: column;
     }
     header{
